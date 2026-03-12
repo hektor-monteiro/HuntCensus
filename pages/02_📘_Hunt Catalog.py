@@ -140,7 +140,8 @@ fig = go.Figure(data = fig1.data + fig2.data).update_layout(coloraxis=fig1.layou
 fig.update_layout(xaxis_title= 'G_BP - G_RP (mag)',
                   yaxis_title="G (mag)",
                   coloraxis_colorbar=dict(title="probability"),
-                  yaxis_range=[20,5])
+                  yaxis_range=[20,5],
+                  height=700, margin=dict(l=20, r=20, t=30, b=20))
 
 
 ###############################################################################	   
@@ -153,7 +154,7 @@ ra_dec = pd.DataFrame({'RA': members_ship['ra'][ind],
                         'probability':members_ship['probability'][ind]})
 
 fig_ra_dec01 = px.scatter(ra_dec, x = 'RA', y = 'DEC', opacity=0.9, color='probability', color_continuous_scale = 'Jet')
-fig_ra_dec01.update_layout(coloraxis_colorbar=dict(title="probability"))
+fig_ra_dec01.update_layout(coloraxis_colorbar=dict(title="probability"), height=700, margin=dict(l=20, r=20, t=30, b=20))
 
 # fig_ra_dec01.update_xaxes(range=[ra_dec['RA'].min(),ra_dec['RA'].max()], constrain="domain")
 fig_ra_dec01.update_yaxes(scaleanchor = "x",scaleratio = 1)

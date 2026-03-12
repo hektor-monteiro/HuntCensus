@@ -140,7 +140,8 @@ fig_CMD_emily = go.Figure(data = cmd_scatter_emily.data + cmd_emily_iso.data).up
 fig_CMD_emily.update_layout(xaxis_title= 'G_BP - G_RP (mag)',
                   yaxis_title="G (mag)",
                   coloraxis_colorbar=dict(title="Pmemb"),
-                  yaxis_range=[20,5])
+                  yaxis_range=[20,5],
+                  height=700, margin=dict(l=20, r=20, t=30, b=20))
 
 ###############################################################################
 #CMD Wilton Dias
@@ -163,7 +164,8 @@ fig_CMD_dias = go.Figure(data = CMD_scatter_dias.data + CMD_iso_dias.data).updat
 fig_CMD_dias.update_layout(xaxis_title= 'G_BP - G_RP (mag)',
                   yaxis_title="G (mag)",
                   coloraxis_colorbar=dict(title="Pmemb"),
-                  yaxis_range=[20,5])
+                  yaxis_range=[20,5],
+                  height=700, margin=dict(l=20, r=20, t=30, b=20))
 
 ###############################################################################	
 x = ['log(age)', 'Dist. (kpc)', 'Av.(mag)']
@@ -172,7 +174,7 @@ y1 = [age_our, dist_our, Av_our]
 y2 = [age, dist, Av]
 
 # criar subplots individuais
-fig_parameters_our, axs = plt.subplots(nrows=1, ncols=3)
+fig_parameters_our, axs = plt.subplots(nrows=1, ncols=3, figsize=(10, 8))
 
 # definir a largura das barras
 bar_width = 0.35
@@ -204,7 +206,7 @@ with container1:
         
     with col3:
         st.caption("Comparison of fundamental parameters")
-        st.pyplot(fig_parameters_our)
+        st.pyplot(fig_parameters_our, use_container_width=True)
 
         
 
