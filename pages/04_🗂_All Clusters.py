@@ -47,7 +47,8 @@ diag_line_dist = px.line(x = [(cluster01['dist']/1000).min(),(cluster02['distanc
 
 fig_dist = go.Figure(data=scatter_dist.data + diag_line_dist.data)
 fig_dist.update_layout(xaxis_title= 'Our',
-                  yaxis_title="Hunt")
+                  yaxis_title="Hunt",
+                  height=600, margin=dict(l=20, r=20, t=30, b=20))
 
 #age
 age_dt = pd.DataFrame({'age': cluster01['age'], 'log_age_84': cluster02['log_age_84']})
@@ -57,7 +58,8 @@ diag_line_age = px.line(x = [cluster01['age'].min(),cluster02['log_age_84'].max(
                          color_discrete_sequence=['red'])
 fig_age = go.Figure(data=scatter_age.data + diag_line_age.data)
 fig_age.update_layout(xaxis_title= 'Our',
-                  yaxis_title="Hunt")
+                  yaxis_title="Hunt",
+                  height=600, margin=dict(l=20, r=20, t=30, b=20))
 
 
 #av
@@ -69,7 +71,8 @@ diag_line_av = px.line(x = [cluster01['Av'].min(),cluster02['a_v_84'].max()],
                          color_discrete_sequence=['red'])
 fig_av = go.Figure(data=fig_av.data + diag_line_av.data)
 fig_av.update_layout(xaxis_title= 'Our',
-                  yaxis_title="Hunt")
+                  yaxis_title="Hunt",
+                  height=600, margin=dict(l=20, r=20, t=30, b=20))
 
 # container1 = st.container()
 # col4, col5 = st.columns(2)
