@@ -2,7 +2,7 @@
 
 This repository contains a Streamlit web application designed to visualize, analyze, and compare open cluster data from different astronomical catalogs, specifically focusing on the Hunt Catalog and comparing it with the Dias Catalog.
 
-Access the live dashboard here: 🔗 [https://catalogscomparison.streamlit.app/](https://catalogscomparison.streamlit.app/)
+Access the live dashboard here: 🔗 [https://huntcensus.streamlit.app/](https://huntcensus.streamlit.app/)
 
 ## Features
 
